@@ -66,3 +66,25 @@ export PATH=$PATH:/＜.tfenv配下のbinフォルダ絶対パス＞
 tfenv
 ```
 とコマンドを実行し、パスの結果が返ってくることを確認する。
+
+- Terraformをインストールする前に、インストール可能なバージョンを確認する。
+```console
+tfenv list-remote
+```
+
+- リストを確認し、最新バージョンをインストール
+```console
+tfenv install 1.9.8
+```
+
+- インストール完了後、以下のコマンドでTerraformのバージョンを指定する。
+```console
+tfenv use 1.9.8
+```
+
+- Terraformが使用可能であるかをバージョンチェックし確認する。
+```console
+terraform version
+```
+
+以上でTerraformのインストールが完了です。
