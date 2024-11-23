@@ -142,8 +142,9 @@ terraform apply -auto-approve
 を実行する。
 -auto-approveは実行確認を求められないオプションです。
 
-- AWSのGUI側でEC2のインスタンスやS3にファイルが作成されたことが確認できれば,
+AWSのGUI側でEC2のインスタンスやS3にファイルが作成されたことが確認できれば,
 コード管理化できたことになります。
+
 不必要なインスタンスは、[terraform destroy]やGUI上で削除する。
 
 
