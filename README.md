@@ -146,8 +146,11 @@ terraform apply -auto-approve
 AWSのGUI側でEC2のインスタンスやS3にファイルが作成されたことが確認できれば,
 コード管理化できたことになります。
 
-また[Terraform]フォルダ下に
+また[Terraform]フォルダ下にこのように
 
+![スクリーンショット 2024-11-23 215512](https://github.com/user-attachments/assets/317e1ac2-e9f7-4b01-9611-361eccd750f9)
+
+tfstateファイルとbackupが生成されていることも確認できればOK
 
 - 不必要なインスタンスは、[terraform destroy]やGUI上で削除する。
 
