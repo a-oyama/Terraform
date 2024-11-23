@@ -42,27 +42,26 @@ aws configure
 - output format(ファイルの保存形式)
 →.jsonなど何でもよいが、自分はスペースで飛ばした。
 
-- S3バケットを作成する
+S3バケットを作成する
 
-AWSでS3サービスを開く。
-"バケットを作成"でバケットユーザーを作成する。
+- AWSでS3サービスを開く。 "バケットを作成"でバケットユーザーを作成する。
 
 Terraformをインストールする
 
-https://github.com/tfutils/tfenv
+- https://github.com/tfutils/tfenv
 からリポジトリをクローンする。
 
-リポジトリを保存したフォルダに".bashrc"とファイルを作成する。
+- リポジトリを保存したフォルダに".bashrc"とファイルを作成する。
 
-ファイルを編集し
+- ファイルを編集し
 ```console
 export PATH=$PATH:/＜.tfenv配下のbinフォルダ絶対パス＞
 ```
 を記述する。.tfenv/bin までのディレクトリを記述すること。
 
-ファイル編集が完了したら、そのフォルダで右クリックし、[Git Bash Here]を押下し再起動する。
+- ファイル編集が完了したら、そのフォルダで右クリックし、[Git Bash Here]を押下し再起動する。
 
-GitBash上で
+- GitBash上で
 ```console
 tfenv
 ```
