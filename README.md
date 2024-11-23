@@ -91,7 +91,61 @@ terraform version
 
 ### Terraformを使ってAWSリソースを構築
 
-はじめに、VSCodeの拡張機能にて、[HashiCorp Terraform]をインストールし、
+はじめに、VSCodeの拡張機能にて[HashiCorp Terraform]をインストールし、
 Terraformコマンドを使用できるようにする。
+
+任意のディレクトリに[Terraform]フォルダを作成し、[main.tf]ファイルを作成する。
+
+- [main.tf]に下記のテンプレートを張り付ける。
+amiについては、EC2のインスタンスを作成し、AMI-IDを取得し記述する。
+
+```console
+provider "aws" {
+  profile = "terraform"
+  region  = "ap-northeast-1"
+}
+
+resource "aws_instance" "test_ec2" {
+  ami           = "ami-?????????????????"
+  instance_type = "t2.micro"
+}
+```
+
+- VSCodeのターミナルを実行し、
+```console
+terraform init
+```
+と初期化コマンドを実行し、[Terraform has been successfully initialized!]
+と表示されることを確認する。
+
+ついでに
+```console
+terraform fmt
+```
+も実行しコードの体裁を整えます。
+
+- リソースを作成する前に、
+```console
+terraform plan
+```
+を実行し、作成物や削除物を事前に確認する。
+また構文チェックを行ってくれる
+```console
+terraform validate
+```
+もやっておくとよい。
+
+- 確認を終えたら、
+```console
+terraform apply -auto-approve
+```
+を実行する。
+-auto-approveは実行確認を求められないオプションです。
+
+- AWSのGUI側でEC2のインスタンスやS3にファイルが作成されたことが確認できれば,
+コード管理化できたことになります。
+不必要なインスタンスは、[terraform destroy]やGUI上で削除する。
+
+
 
 
