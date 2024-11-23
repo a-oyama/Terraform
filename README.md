@@ -88,3 +88,10 @@ terraform version
 ```
 
 以上でTerraformのインストールが完了です。
+
+### Terraformを使ってAWSリソースを構築
+
+はじめに、VSCodeの拡張機能にて、[HashiCorp Terraform]をインストールし、
+Terraformコマンドを使用できるようにする。
+
+
