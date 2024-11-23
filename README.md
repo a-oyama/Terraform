@@ -13,13 +13,14 @@
 ```console
 aws configure list
 ```
-
+```console
       Name                    Value             Type    Location
       ----                    -----             ----    --------
    profile                <not set>             None    None
 access_key     ****************CVME shared-credentials-file
 access_key     ****************THfG shared-credentials-file
     region           ap-northeast-1      config-file    ~/.aws/config
+```
 
 - access_key, access_key, region が not set の場合、設定するために下記コマンドを実行
 
